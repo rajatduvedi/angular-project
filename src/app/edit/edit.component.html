@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="dropdown">
+
+    <md-select placeholder="DemoAppBanking">
+       <md-option>njkf</md-option>
+       <md-option>nfjkn</md-option>
+       <md-option>jfjknkj</md-option>
+    </md-select>
+
+  </div>
+
+  <div class="panel">
+    <md-toolbar color="primary">
+      Compose Mail
+    </md-toolbar>
+    <div class="row">
+      <div class="col1"></div>
+      <div class="col2">
+        <a [routerLink]="['/']">
+          <button md-raised-button color="primary" >
+          <md-icon class="md-24">backspace</md-icon>
+          Back
+          </button>
+        </a>
+        <button md-raised-button color="primary" (click)="openDialog()">
+          <md-icon class="md-24">visibility</md-icon>
+          Preview
+        </button>
+        <button md-raised-button color="primary">
+          <md-icon class="md-24">save</md-icon>
+          Save As Draft
+        </button>
+        <button md-raised-button color="primary" (click)="openSendDialog()">
+          <md-icon class="md-24">email</md-icon>
+          Send
+        </button>
+        <button md-raised-button color="primary" (click)="openScheduleDialog()">
+            <md-icon class="md-24">send</md-icon>
+          Schedule
+        </button>
+      </div>
+    </div>
+    <form #from="ngForm" class="formgroup">
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <md-input-container class="full-width">
+          <input mdInput placeholder="From Email" name="fromEmail"
+          [(ngModel)]="model.fromEmail" #fromEmail="ngModel">
+        </md-input-container>
+      </div>
+      <div class="row">
+        <div class="full-width">
+          <md-button-toggle-group #group="mdButtonToggleGroup">
+            <md-button-toggle value="User Name" color="primary">
+              User Name
+            </md-button-toggle>
+            <md-button-toggle value="Channel">
+              Channel
+            </md-button-toggle>
+          </md-button-toggle-group>
+          <div class="example-selected-value">Selected value: {{group.value}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <md-input-container class="full-width">
+          <input mdInput placeholder="To" name="to" [(ngModel)]="model.to" #to="ngModel">
+        </md-input-container>
+      </div>
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Email To be Shown(optional)" name="mailToBeShown" [(ngModel)]="model.mailToBeShown" #mailToBeShown="ngModel">
+        </md-input-container>
+      </div>
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <md-input-container class="full-width">
+          <input mdInput placeholder="From Name(optional)" name="fromName" [(ngModel)]="model.fromName" #fromName="ngModel">
+        </md-input-container>
+      </div>
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Reply-to-Address(optional)" name="replyToAddress" [(ngModel)]="model.replyToAddress" #replyToAddress="ngModel">
+        </md-input-container>
+      </div>
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <div class="full-width">
+          <input type="file" placeholder="choosefile" id="to">
+        </div>
+      </div>
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Enter Subject" id="to">
+        </md-input-container>
+      </div>
+      <div class="row">
+        <section class="full-width">
+          <md-checkbox class="example-margin" >Custom Header</md-checkbox>
+          <md-checkbox class="example-margin" >View in Browser</md-checkbox>
+          <md-checkbox class="example-margin" >View in mobile</md-checkbox>
+        </section>
+      </div>
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <md-input-container class="full-width">
+          <!-- <div [froalaEditor]>Hello, Froala!</div> -->
+          <textarea mdInput placeholder="Content" id="to"></textarea>
+        </md-input-container>
+      </div>
+      <div class="row">
+        <!-- <label>From Email</label> -->
+        <md-input-container class="full-width">
+          <textarea mdInput placeholder="Test" id="to"></textarea>
+        </md-input-container>
+      </div>
+      <div class="row">
+        <button md-raised-button name="submitForm" color="primary">Send Test Broadcast</button>
+      </div>
+    </form>
+  </div>
+</div>

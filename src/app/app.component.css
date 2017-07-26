@@ -1,0 +1,46 @@
+/*.container{
+  margin:10px;
+}*/
+.dropdown{
+  margin:20px;
+  display: inline-block;
+    /*margin-right: 40px;*/
+}
+.newdash{
+  margin: 30px;
+  display:inline;
+  float:right;
+}
+.toolbar{
+  margin:5px
+}
+.mat-select{
+  margin-right: 40px
+}
+.mat-fab.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary{
+  margin-left:20px;
+  border-radius: 10px;
+  display: inline;
+}
+.tab{
+  margin-left: 20px;
+}
+.tab .mat-fab.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary{
+  border-radius:2px;
+  margin-left:0px;
+}
+.mat-tab-label-container{
+    background: blue;
+
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
